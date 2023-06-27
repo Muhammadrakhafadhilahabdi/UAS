@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 261
-  Top = 388
-  Width = 1571
+  Left = 285
+  Top = 381
+  Width = 1664
   Height = 848
   Caption = 'Form1'
   Color = clBtnFace
@@ -220,7 +220,7 @@ object Form1: TForm1
   object DBGrid1: TDBGrid
     Left = 288
     Top = 328
-    Width = 1241
+    Width = 1361
     Height = 273
     DataSource = DataSource1
     TabOrder = 14

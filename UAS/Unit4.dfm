@@ -1,9 +1,9 @@
-object Form2: TForm2
-  Left = 343
-  Top = 212
+object Form4: TForm4
+  Left = 214
+  Top = 220
   Width = 1305
   Height = 675
-  Caption = 'Form2'
+  Caption = 'Form4'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,101 +14,84 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 24
-    Top = 72
-    Width = 44
+    Left = 32
+    Top = 40
+    Width = 27
     Height = 13
-    Caption = 'Siswa  ID'
+    Caption = 'Nama'
   end
   object Label2: TLabel
-    Left = 24
-    Top = 104
-    Width = 36
+    Left = 32
+    Top = 80
+    Width = 41
     Height = 13
-    Caption = 'Ortu ID'
+    Caption = 'Pasword'
   end
   object Label3: TLabel
-    Left = 24
-    Top = 136
-    Width = 83
+    Left = 32
+    Top = 120
+    Width = 25
     Height = 13
-    Caption = 'Status Hubungan'
+    Caption = 'Level'
   end
   object Label4: TLabel
-    Left = 24
-    Top = 168
-    Width = 56
+    Left = 32
+    Top = 160
+    Width = 31
     Height = 13
-    Caption = 'Keterangan'
-  end
-  object DBGrid1: TDBGrid
-    Left = 8
-    Top = 408
-    Width = 553
-    Height = 120
-    DataSource = DataSource1
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-    OnCellClick = DBGrid1CellClick
+    Caption = 'Status'
   end
   object Edit1: TEdit
-    Left = 136
-    Top = 72
+    Left = 112
+    Top = 40
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 112
+    Top = 80
     Width = 121
     Height = 21
     TabOrder = 1
   end
-  object Edit2: TEdit
-    Left = 136
-    Top = 104
+  object Edit3: TEdit
+    Left = 112
+    Top = 120
     Width = 121
     Height = 21
     TabOrder = 2
   end
-  object Edit3: TEdit
-    Left = 136
-    Top = 136
+  object Edit4: TEdit
+    Left = 112
+    Top = 160
     Width = 121
     Height = 21
     TabOrder = 3
   end
-  object Edit4: TEdit
-    Left = 136
-    Top = 168
-    Width = 121
-    Height = 21
+  object Button1: TButton
+    Left = 32
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Simpan'
     TabOrder = 4
   end
-  object Button3: TButton
-    Left = 280
-    Top = 112
+  object Button2: TButton
+    Left = 128
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Edit'
     TabOrder = 5
-    OnClick = Button3Click
   end
-  object Button4: TButton
-    Left = 280
-    Top = 152
+  object Button3: TButton
+    Left = 224
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Hapus'
     TabOrder = 6
-    OnClick = Button4Click
-  end
-  object b3: TButton
-    Left = 280
-    Top = 72
-    Width = 75
-    Height = 25
-    Caption = 'Simpan'
-    TabOrder = 7
-    OnClick = b3Click
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -121,21 +104,18 @@ object Form2: TForm2
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\Zeos703\libmysql.dll'
-    Left = 72
-    Top = 8
+    Left = 448
   end
   object ZQuery1: TZQuery
     Connection = ZConnection1
     Active = True
     SQL.Strings = (
-      'select * from tb_hubungan')
+      'select * from tb_kelas')
     Params = <>
-    Left = 136
-    Top = 8
+    Left = 512
   end
   object DataSource1: TDataSource
     DataSet = ZQuery1
-    Left = 192
-    Top = 8
+    Left = 568
   end
 end

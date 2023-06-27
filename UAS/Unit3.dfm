@@ -1,9 +1,9 @@
-object Form2: TForm2
-  Left = 343
-  Top = 212
+object Form3: TForm3
+  Left = 259
+  Top = 139
   Width = 1305
   Height = 675
-  Caption = 'Form2'
+  Caption = 'Form3'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,36 +15,29 @@ object Form2: TForm2
   TextHeight = 13
   object Label1: TLabel
     Left = 24
-    Top = 72
-    Width = 44
+    Top = 80
+    Width = 27
     Height = 13
-    Caption = 'Siswa  ID'
+    Caption = 'Nama'
   end
   object Label2: TLabel
     Left = 24
     Top = 104
-    Width = 36
+    Width = 22
     Height = 13
-    Caption = 'Ortu ID'
+    Caption = 'jenis'
   end
   object Label3: TLabel
     Left = 24
     Top = 136
-    Width = 83
+    Width = 36
     Height = 13
-    Caption = 'Status Hubungan'
-  end
-  object Label4: TLabel
-    Left = 24
-    Top = 168
-    Width = 56
-    Height = 13
-    Caption = 'Keterangan'
+    Caption = 'jurusan'
   end
   object DBGrid1: TDBGrid
-    Left = 8
-    Top = 408
-    Width = 553
+    Left = 80
+    Top = 424
+    Width = 320
     Height = 120
     DataSource = DataSource1
     TabOrder = 0
@@ -56,58 +49,60 @@ object Form2: TForm2
     OnCellClick = DBGrid1CellClick
   end
   object Edit1: TEdit
-    Left = 136
+    Left = 104
     Top = 72
     Width = 121
     Height = 21
     TabOrder = 1
   end
-  object Edit2: TEdit
-    Left = 136
+  object ComboBox1: TComboBox
+    Left = 104
     Top = 104
-    Width = 121
+    Width = 145
     Height = 21
+    ItemHeight = 13
     TabOrder = 2
+    Items.Strings = (
+      'Pagi'
+      'Siang')
   end
-  object Edit3: TEdit
-    Left = 136
+  object ComboBox2: TComboBox
+    Left = 104
     Top = 136
-    Width = 121
+    Width = 145
     Height = 21
+    ItemHeight = 13
     TabOrder = 3
-  end
-  object Edit4: TEdit
-    Left = 136
-    Top = 168
-    Width = 121
-    Height = 21
-    TabOrder = 4
+    Items.Strings = (
+      'Bahasa'
+      'IPA'
+      'IPS')
   end
   object Button3: TButton
-    Left = 280
-    Top = 112
+    Left = 272
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'Edit'
-    TabOrder = 5
+    TabOrder = 4
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 280
-    Top = 152
+    Left = 272
+    Top = 144
     Width = 75
     Height = 25
     Caption = 'Hapus'
-    TabOrder = 6
+    TabOrder = 5
     OnClick = Button4Click
   end
   object b3: TButton
-    Left = 280
-    Top = 72
+    Left = 272
+    Top = 64
     Width = 75
     Height = 25
     Caption = 'Simpan'
-    TabOrder = 7
+    TabOrder = 6
     OnClick = b3Click
   end
   object ZConnection1: TZConnection
@@ -128,7 +123,7 @@ object Form2: TForm2
     Connection = ZConnection1
     Active = True
     SQL.Strings = (
-      'select * from tb_hubungan')
+      'select * from tb_kelas')
     Params = <>
     Left = 136
     Top = 8
