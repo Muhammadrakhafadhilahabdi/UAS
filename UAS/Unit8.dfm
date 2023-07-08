@@ -125,4 +125,56 @@ object Form8: TForm8
     Height = 21
     TabOrder = 7
   end
+  object Button1: TButton
+    Left = 16
+    Top = 408
+    Width = 75
+    Height = 25
+    Caption = 'Simpan'
+    TabOrder = 8
+  end
+  object Button2: TButton
+    Left = 112
+    Top = 408
+    Width = 75
+    Height = 25
+    Caption = 'Edit'
+    TabOrder = 9
+  end
+  object Button3: TButton
+    Left = 208
+    Top = 408
+    Width = 75
+    Height = 25
+    Caption = 'Hapus'
+    TabOrder = 10
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'database_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\Zeos703\libmysql.dll'
+    Left = 72
+    Top = 8
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from tb_siswa')
+    Params = <>
+    Left = 136
+    Top = 8
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 192
+    Top = 8
+  end
 end
